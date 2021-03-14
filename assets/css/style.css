@@ -1,9 +1,12 @@
+/* Variables Styling*/
+
 :root {
   --light: #dfdcda;
   --dark: #2d2d2d;
   --pink: #efc4d5;
 }
 
+/*Elements Selectors*/
 body {
   background-color: var(--light);
   color: var(--dark);
@@ -80,6 +83,8 @@ footer a:hover {
   color: var(--dark); 
 }
 
+/*About Me Section Styling*/
+
 .about-me {
   width: 80%;
   bottom: 0;
@@ -93,6 +98,8 @@ footer a:hover {
   margin-right: 25px;
   max-height:200px;
 }
+
+/*My Work Styling*/
 
 .my-work {
   width: 80%;
@@ -109,6 +116,17 @@ footer a:hover {
   display: flex;
   flex: 1 0 100%;
   flex-wrap: wrap;
+}
+
+#hero{
+  flex-basis:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#hero:hover {
+  opacity: 0.7;
 }
 
 .item{
@@ -132,16 +150,17 @@ footer a:hover {
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: var(--light);
-  background-color: var(--dark);
+  color: var(--dark);
+  background-color: var(--pink);
   text-align: center;
   cursor: pointer;
-  width: 50%;
+  width: 100%;
 }
 
 .button:hover {
   opacity: 0.7;
 }
+/*Opted with a mobile first page load and have the adaptations for larger screen sizes below*/
 
 @media screen and (min-width: 768px) {
   main,
@@ -157,9 +176,24 @@ footer a:hover {
   .my-work {
     width:90%;
   }
-  
+
   .item {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .about-me{
+    width:90%;
+  }
+
+  .my-work {
+    width:90%;
+  }
+
+  .item {
+    flex: 0 0 25%;
+    max-width: 50%;
+  }
+}  
